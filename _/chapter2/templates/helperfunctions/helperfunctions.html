@@ -1,0 +1,15 @@
+<% if(typeof(avatar) === 'undefined') %>
+<img src="<%= avatar %>" />
+<% } else { %>
+<img src="images/default_avatar.png" />
+<% } %>
+
+<! --Helper Function -->
+<img src="<%= getAvatar(avatar) %>" />
+
+// A template helper function to be merged with data
+var getAvatar = function(avatar){
+	return avatar || "images/default_avatar.png";
+}
+
+var data = this.model.getJSON();

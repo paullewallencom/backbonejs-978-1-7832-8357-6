@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Layout Manager Example</title>
+
+    <link type="text/css" rel="stylesheet" href="http://getbootstrap.com/2.3.2/assets/css/bootstrap.css" />
+
+    <style>
+    #main_content {
+    	width: 530px;
+		padding: 10px;
+		margin: 20px auto;
+		border: 1px solid #ddd;
+        overflow: auto;
+    }
+
+    #main_content .user-list{
+    	float: left;
+    	width: 150px;
+    }
+
+     #main_content .user-details{
+    	float: left;
+    	width: 350px;
+    	border: 1px solid #ccc;
+    	border-radius: 5px;
+    	margin-left: 20px;
+    }
+
+    #main_content .user-details .avatar{
+        text-align: center;
+    }
+
+    #main_content .user-details .avatar img{
+        width: 90px;
+        margin: 0 auto;
+    }
+
+    #main_content .user-details li{
+        margin: 10px;
+        list-style: none;
+    }
+    </style>
+</head>
+
+<body>
+	<script type="text/template" id="tpl_main_content">
+		<div id="main_content">
+	    	<div class="user-list">
+	    		
+	    	</div>
+	    	<div class="user-details">
+	    		
+	    	</div>
+	    </div>
+    </script>
+
+    <script type="text/template" id="tpl_user_item">
+	    <a class="name" href="#">{{name}}</a>
+    </script>
+
+    <script type="text/template" id="tpl_user_details">
+        <div class="avatar"><img src="{{avatar}}" /></div>
+        <ul>
+            <li><strong>Name:</strong>  {{name}}</li>
+            <li><strong>Email:</strong>  {{email}}</li>
+            <li><strong>Phone:</strong>  {{phone}}</li>
+            <li><strong>Twitter:</strong>  {{twitter}}</li>
+        </ul>
+    </script>
+
+    <script src="../../lib/jquery-2.0.1.js"></script>
+    <script src="../../lib/underscore.js"></script>
+    <script src="../../lib/backbone.js"></script>
+    <script src="../../lib/backbone.layoutmanager.js"></script>
+    <script src="layoutmanager.js"></script>
+</body>
+
+</html>
+
